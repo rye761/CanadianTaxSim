@@ -1,0 +1,5 @@
+/Users/ryan/Programming/TaxSim/TaxSim/bin/Debug/TaxSim.exe
+/Users/ryan/Programming/TaxSim/TaxSim/bin/Debug/TaxSim.pdb
+/Users/ryan/Programming/TaxSim/TaxSim/obj/Debug/TaxSim.csprojAssemblyReference.cache
+/Users/ryan/Programming/TaxSim/TaxSim/obj/Debug/TaxSim.exe
+/Users/ryan/Programming/TaxSim/TaxSim/obj/Debug/TaxSim.pdb

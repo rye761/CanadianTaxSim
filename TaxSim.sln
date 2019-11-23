@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxSim", "TaxSim\TaxSim.csproj", "{B781CF0E-A140-45BA-ACF4-558F55FFC580}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B781CF0E-A140-45BA-ACF4-558F55FFC580}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{B781CF0E-A140-45BA-ACF4-558F55FFC580}.Debug|anycpu.Build.0 = Debug|anycpu
+		{B781CF0E-A140-45BA-ACF4-558F55FFC580}.Release|anycpu.ActiveCfg = Release|anycpu
+		{B781CF0E-A140-45BA-ACF4-558F55FFC580}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
