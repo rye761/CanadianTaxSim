@@ -7,8 +7,12 @@ namespace TaxSim
         public static void Main(string[] args)
         {
             Wallet wallet = new Wallet();
+            wallet.SetRRSPContribution(0.10F);
             wallet.ReceivePaycheck(300000);
-            Console.WriteLine(wallet.GetBalance());
+            wallet.PrintAccounts();
+
+            wallet.Tick();
+            wallet.PrintAccounts();
         }
     }
 }

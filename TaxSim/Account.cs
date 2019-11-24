@@ -3,8 +3,8 @@ namespace TaxSim
 {
     public class Account
     {
-        private float _balance;
-        private float _interestRate;
+        protected float _balance;
+        protected float _interestRate;
 
         public Account()
         {

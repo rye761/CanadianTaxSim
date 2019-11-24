@@ -15,6 +15,9 @@ namespace TaxSim
         public static float baseFederalExemption = 12069F;
         public static float baseProvincialExemption = 10582F;
 
+        public static float maxRRSPContributionRate = 0.18F;
+        public static float maxRRSPContribution = 27230F;
+
         public static Tuple<int, float>[] federalTaxLevels =
         {
             Tuple.Create( 47630, 0.15F ),

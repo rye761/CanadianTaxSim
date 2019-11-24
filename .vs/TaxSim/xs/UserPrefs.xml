@@ -2,10 +2,11 @@
   <MonoDevelop.Ide.ItemProperties.TaxSim PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="TaxSim/Wallet.cs">
     <Files>
-      <File FileName="TaxSim/Program.cs" Line="11" Column="52" />
-      <File FileName="TaxSim/Wallet.cs" Line="45" Column="137" />
+      <File FileName="TaxSim/Program.cs" Line="10" Column="44" />
+      <File FileName="TaxSim/Wallet.cs" Line="41" Column="1" />
       <File FileName="TaxSim/Account.cs" Line="25" Column="43" />
-      <File FileName="TaxSim/Rates.cs" Line="67" Column="109" />
+      <File FileName="TaxSim/Rates.cs" Line="19" Column="58" />
+      <File FileName="TaxSim/RRSPAccount.cs" Line="6" Column="29" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
