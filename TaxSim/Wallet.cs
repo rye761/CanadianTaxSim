@@ -8,12 +8,14 @@ namespace TaxSim
         private Dictionary<string, Account> accounts;
         private Dictionary<string, Account> taxAccounts;
         private float rrspContribution;
+        private float tfsaContribution;
 
         public Wallet()
         {
             accounts = new Dictionary<string, Account>();
             accounts.Add("cash", new Account());
             accounts.Add("rrsp", new RRSPAccount());
+            accounts.Add("tfsa", new TFSAAccount());
 
             taxAccounts = new Dictionary<string, Account>();
             taxAccounts.Add("ei", new Account());
@@ -21,12 +23,45 @@ namespace TaxSim
             taxAccounts.Add("income", new Account());
 
             rrspContribution = 0;
+            tfsaContribution = 0;
         }
 
 
         public float GetBalance()
         {
             return SumAccountDict(accounts);
+        }
+
+        public float GetAccountBalance(string identifier)
+        {
+            if (accounts.ContainsKey(identifier))
+            {
+                return accounts[identifier].GetBalance();
+            }
+            else if (taxAccounts.ContainsKey(identifier))
+            {
+                return accounts[identifier].GetBalance();
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public float GetAnnualChange(string identifier)
+        {
+            if (accounts.ContainsKey(identifier))
+            {
+                return accounts[identifier].GetAnnualChange();
+            }
+            else if (taxAccounts.ContainsKey(identifier))
+            {
+                return accounts[identifier].GetAnnualChange();
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         public float GetTaxPaid()
@@ -37,6 +72,11 @@ namespace TaxSim
         public void SetRRSPContribution(float contribution)
         {
             rrspContribution = Math.Min(contribution, Rates.maxRRSPContribution);
+        }
+
+        public void SetTFSAContribution(float contribution)
+        {
+            tfsaContribution = contribution;
         }
 
         public void Tick()
@@ -58,6 +98,7 @@ namespace TaxSim
                 * Rates.cppRate, Rates.cppMaximumContribution);
             float eiAmount = Math.Min(amount * Rates.eiRate, Rates.eiMaximumContribution);
             float rrspAmount = Math.Min(amount * rrspContribution, Rates.maxRRSPContribution);
+            float tfsaAmount = Math.Min((accounts["tfsa"] as TFSAAccount).GetAvailableContributionRoom(), amount * tfsaContribution);
             float cashAmount = amount - cppAmount - eiAmount - rrspAmount;
 
             taxAccounts["cpp"].Deposit(cppAmount);

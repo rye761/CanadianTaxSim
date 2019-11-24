@@ -37,6 +37,7 @@
     <Compile Include="CashAccount.cs" />
     <Compile Include="Rates.cs" />
     <Compile Include="RRSPAccount.cs" />
+    <Compile Include="TFSAAccount.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

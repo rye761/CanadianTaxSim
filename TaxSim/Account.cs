@@ -5,11 +5,13 @@ namespace TaxSim
     {
         protected float _balance;
         protected float _interestRate;
+        protected float _annualChange;
 
         public Account()
         {
             _balance = 0;
             _interestRate = 0;
+            _annualChange = 0;
         }
 
         public float GetBalance()
@@ -20,6 +22,7 @@ namespace TaxSim
         public void Deposit(float amount)
         {
             _balance += amount;
+            _annualChange += amount;
         }
 
         public void Withdraw(float amount)
@@ -33,9 +36,15 @@ namespace TaxSim
             to.Deposit(amount);
         }
 
+        public float GetAnnualChange()
+        {
+            return _annualChange;
+        }
+
         public void Tick()
         {
             _balance = _balance * (1 + _interestRate);
+            _annualChange = 0;
         }
     }
 }
