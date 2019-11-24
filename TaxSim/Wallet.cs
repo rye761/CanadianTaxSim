@@ -40,7 +40,7 @@ namespace TaxSim
             }
             else if (taxAccounts.ContainsKey(identifier))
             {
-                return accounts[identifier].GetBalance();
+                return taxAccounts[identifier].GetBalance();
             }
             else
             {
@@ -56,7 +56,7 @@ namespace TaxSim
             }
             else if (taxAccounts.ContainsKey(identifier))
             {
-                return accounts[identifier].GetAnnualChange();
+                return taxAccounts[identifier].GetAnnualChange();
             }
             else
             {
